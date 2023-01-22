@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 45px;
+            margin-top: 220px;
+        }
+
+        body {
+            /* background-color: rgb(251, 251, 113); */
+            background-image: url("https://cdn.wallpapersafari.com/91/96/i3PHS9.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .btn4 {
+            padding: 12px;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn4">Logout</button>
+    <h1>WELCOME <span id="userN"></span></h1>
+    <script>
+        userN = document.getElementById("userN");
+        data = JSON.parse(window.sessionStorage.getItem("userInfo"));
+        console.log(data);
+        userN.innerText = data.userN;
+        logoutBtn = document.querySelector(".btn4");
+        logoutBtn.onclick = function () {
+            sessionStorage.removeItem("userInfo");
+            window.location.href = "index.html";
+        };
+    </script>
+</body>
+
+</html>

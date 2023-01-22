@@ -1,0 +1,56 @@
+body{
+    padding:0%;
+    margin:0%;
+    box-sizing: border-box;
+    /* background-image: linear-gradient(to right ,yellow,white); */
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/304/196/925/yellow-green-pastel-blur-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.container{
+    height:100px;
+    width:900px;
+   /* background-image: linear-gradient(to bottom,orange ,white); */
+   color:blue;
+   margin-left: 100px;
+   font-size: 15px;
+   font-family: 'Times New Roman', Times, serif;
+}
+#head1{
+    color: black;
+    font-size: 35px;
+}
+#head2{
+    color: rgb(255, 50, 4);
+}
+form{
+    margin-left: 100px;
+    margin-top: 30px;
+}
+#user,#pass,#email{
+    font-size: 20px;
+}
+#userName,#Password,#Email{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding:10px;
+    width:900px;
+    border-radius:5px;
+}
+#btn1,#btn2,#btn3{
+    padding:12px;
+    color:white;
+    border:none;
+    border-radius: 3px;
+}
+#btn1{
+    background-color: rgb(11, 189, 11);
+}
+#btn2,#btn3{
+    background-color: blue;
+}
+a{
+    text-decoration: none;
+    color: white;
+}

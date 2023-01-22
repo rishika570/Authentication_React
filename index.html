@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="head1">Authentication with session Storage</h1>
+        <h1 id="head2">Login</h1>
+    </div>
+    <form>
+        <label for="userName" id="user">UserName:</label>
+        </br>
+        <input type="text" placeholder="Enter UserName" id="userName">
+        </br>
+        <label for="Password" id="pass">Password:</label>
+        </br>
+        <input type="password" placeholder="Enter Password" id="Password">
+        </br>
+        <button onclick="getdetails(event)" type="submit" id="btn1">Login</button>
+        <button id="btn2"><a href=./register.html>Register</a></button>
+    </form>
+    <script>
+        function getdetails(e) {
+            e.preventDefault();
+            let userN = document.getElementById('userName').value;
+            let passW = document.getElementById('Password').value;
+            if (userN === "" && passW == "") {
+                alert("Enter Credentials");
+                return;
+            }
+            let data = JSON.parse(window.sessionStorage.getItem('userInfo'));
+            if (data == null) {
+                alert("Register yourself");
+            }
+            else {
+                if (userN == data.userN && passW == data.passW) {
+                    window.location.href = "./submit.html";
+                }
+                else {
+                    alert("Invalid username or Password");
+                    return;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
